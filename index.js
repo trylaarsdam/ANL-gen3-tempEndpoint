@@ -19,12 +19,12 @@ app.post('/api/v1/data', (req, res) => {
 
 app.get('/api/v1/data', (req, res) => {
   fs.readFile('log.json', 'utf8' , (err, data) => {
-  if (err) {
-    console.error(err)
-    return
-  }
-  res.send(data);
-})
+    if (err) {
+      console.error(err)
+      return
+    }
+    res.send(data);
+  })
 })
 
 app.listen(port);
